@@ -60,7 +60,7 @@ def convert_excel_to_json(excel_path, aggregated_data):
         if province_name not in aggregated_data:
             aggregated_data[province_name] = {
                 "province": province_name,
-                "isSpecialCity": False,
+                "isSpecialCity": province_name.endswith('시'),
                 "cities": [],
                 "totalTownships": 0
             }
